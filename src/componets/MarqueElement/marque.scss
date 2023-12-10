@@ -1,0 +1,31 @@
+@import '../../styles/continers.scss';
+
+.marque {
+  
+    .marque-wrapper {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 24px;
+
+        .left-wrapper {
+            width: 100%;
+            height: 100%;
+            padding: 10px 0;
+            padding-left: 10px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .right-wrapper {
+            padding: 10px 0;
+            background: #333333;
+
+        }
+
+    }
+}

@@ -1,0 +1,158 @@
+@import "../styles/continers.scss";
+
+
+.desktop-header {
+    background: #161616;
+    padding: 16px 0;
+
+    .header-wrapeer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        @media(max-width:375px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .logo {
+            img {
+                width: 100%;
+                min-width: 100px;
+            }
+        }
+
+        .mobile-toggle {
+            display: none;
+
+            @media(max-width:767px) {
+                display: block;
+            }
+        }
+
+        .left-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 48px;
+
+            @media(max-width:475px) {
+                // width: 100%;
+                // justify-content: space-between;
+                gap: 8px;
+
+            }
+
+            @media(max-width:375px) {
+                width: 100%;
+                justify-content: space-between;
+          
+
+            }
+            .navigation {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                position: relative;
+                z-index: 10;
+
+                @media(max-width :767px) {
+                    width: 80%;
+                    background-color:#161616;
+                    flex-direction: column;
+                    height: 100vh;
+                    position: absolute;
+                    align-items: flex-start;
+                    top: 0;
+                    padding-left: 40px;
+                    padding-top: 60px;
+                    left: -400px;
+                    transition: all 0.9s ease;
+                
+                  
+                }
+
+                &.showMobile_nav {
+                    position: fixed;
+                    top: 0;
+                    left: -400px;
+                    left: 0px !important;
+                }
+
+
+                .crossIcon {
+                    position: absolute;
+                    top: 16px;
+                    right: 16px;
+                    font-size: 26px;
+                    color: #fff;
+                    cursor: pointer;
+                    @media(min-width: 768px) {
+                        display: none;
+                    }
+                }
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .right-navigation {
+
+
+            @media(max-width:375px) {
+  
+                width: 100%;
+
+
+            }
+
+            .bnt-group {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+
+            @media(max-width:475px) {
+  
+                width: 100%;
+
+
+            }
+
+                button {
+                    padding: 10px 18px;
+                    width: 100px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+
+            @media(max-width:475px) {
+  
+                width: 100%;
+
+
+            }   
+                }
+
+                .login {
+                    border-radius: 12px 0 0 12px;
+                    background: linear-gradient(90deg, #FFEE52 6.03%, #FF9D29 56.9%);
+
+                }
+
+                .register {
+                    border-radius: 0px 12px 12px 0;
+                    background: linear-gradient(90deg, #6FC8FB 3.64%, #418CFC 55.45%);
+
+                }
+            }
+        }
+
+    }
+}
